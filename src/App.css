@@ -1,0 +1,207 @@
+  /* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}   */
+
+/* .row{
+  width:1320px;
+  margin:auto;
+  display:flex;
+}
+
+.cardItems{
+  flex-basis: 23%;
+  background-color: lightblue;
+  margin:5%;
+  height:200px;
+} */
+
+/* .para{
+  background-color: red;
+  padding:10px;
+  width:1000px;
+  margin:auto;
+  text-align: left;
+} */ 
+
+ .calculator {
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: pink;
+  text-align: center;
+}
+
+.display {
+  margin-bottom: 20px;
+}
+
+.display input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  text-align: right;
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 18px;
+  color: black;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  height: 50px;
+  width:60px;
+  font-size: 20px;
+  background: black;
+  color: white;
+  border: none;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: blue;
+}  /* end of calculator */
+
+
+/* .menu{
+  width:80%;
+  text-align: left;
+  left: -100%;
+  position: fixed;
+  transition: 0.5s;
+  list-style: none;
+  height: 100vh;
+  background-color: yellow;
+}
+
+.menu ul li{
+  list-style: none;
+  padding: 10px 0px;
+}
+
+.activeMenu{
+  left: 0%;
+}
+.menu ul li{
+  list-style: none;
+  padding: 10px 0px;
+}
+.micon{
+  position: absolute;
+  right: 10px;
+ }  end of nav bar */
+
+ /* .post-card{
+  padding: 20px;
+  box-shadow: rgba(149,157,165,0.5) 0px 8px 24px;
+ } */
+
+
+ /* form{
+  width:500px;
+  margin:auto;
+  display:flex;
+  gap:20px;
+  text-align: center;
+
+}
+
+form input{
+  height:40px;
+  flex-basis: 80%;
+
+}
+form button{
+  flex-basis:20%;
+  background-color: blue;
+  color: white;
+}
+
+.outerDiv{
+  width: 500px;
+  margin: auto;
+
+}
+.outerDiv ul{
+  margin: 0px;
+  margin-top: 50px;
+  padding: 0px;
+  list-style:none;
+}
+
+.outerDiv ul li{
+  color:white;
+  padding:10px;
+  font-size:25px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: left;
+  background-color: black;
+
+}
+.outerDiv ul li span{
+  right:20px ;
+  cursor: pointer;
+  position: absolute;
+}
+
+.completetodo{
+  text-decoration: line-through red;
+  background-color:gray !important;
+  
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  height: 50vh; 
+  text-align: center; 
+} */
+
+/*end of todo-list*/
