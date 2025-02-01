@@ -1,0 +1,61 @@
+/* Navbar Styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color:black;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 55px;
+}
+
+.nav-menu li {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    padding: 5px 10px;
+}
+
+.nav-menu li:hover {
+    color: #ff6600; /* Highlight on hover */
+}
+
+/* Active Page Highlight */
+.nav-menu li.active {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* Contact Button */
+.nav-contact {
+    background: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-contact:hover {
+    background: white;
+}
+
+/* Content Section Styling */
+
+
+.content p {
+    font-size: 20px;
+    color: purple;
+    font-weight: 500;
+    text-align: center;
+    
+}

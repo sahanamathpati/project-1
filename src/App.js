@@ -408,80 +408,80 @@
 
 
 
-import React, { useState } from "react";
-import "./App.css";
+// import React, { useState } from "react";
+// import "./App.css";
 
-function App() {
-  const [input, setInput] = useState("");
-  const [result, setResult] = useState("");
+// function App() {
+//   const [input, setInput] = useState("");
+//   const [result, setResult] = useState("");
 
   // Handle button click
-  const handleClick = (value) => {
-    setInput((prev) => prev + value);
-  };
+  // const handleClick = (value) => {
+  //   setInput((prev) => prev + value);
+  // };
 
   // Calculate the result
-  const calculateResult = () => {
-    try {
+  // const calculateResult = () => {
+  //   try {
       // Evaluate basic operations
-      const evalResult = eval(input);
-      setResult(evalResult);
-    } catch (error) {
-      setResult("Error");
-    }
-  };
+  //     const evalResult = eval(input); 
+  //     setResult(evalResult);
+  //   } catch (error) {
+  //     setResult("Error");
+  //   }
+  // };
 
   // Clear the input
-  const clearInput = () => {
-    setInput("");
-    setResult("");
-  };
+  // const clearInput = () => {
+  //   setInput("");
+  //   setResult("");
+  // };
 
   // Backspace functionality
-  const backspace = () => {
-    setInput((prev) => prev.slice(0, -1));
-  };
+//   const backspace = () => {
+//     setInput((prev) => prev.slice(0, -1));
+//   };
 
-  return (
-    <div className="calculator">
-      <div className="display">
-        <input type="text" value={input} readOnly />
-        <div className="result">{result}</div>
-      </div>
-      <div className="buttons">
-        <button onClick={clearInput}>C</button>
-        <button onClick={backspace}>←</button>
-        <button onClick={() => handleClick("/")}>%</button>
-        <button onClick={() => handleClick("*")}>/</button>
-        <button onClick={() => handleClick("7")}>7</button>
-        <button onClick={() => handleClick("8")}>8</button>
-        <button onClick={() => handleClick("9")}>9</button>
-        <button onClick={() => handleClick("-")}>+</button>
-        <button onClick={() => handleClick("4")}>4</button>
-        <button onClick={() => handleClick("5")}>5</button>
-        <button onClick={() => handleClick("6")}>6</button>
-        <button onClick={() => handleClick("+")}>-</button>
-        <button onClick={() => handleClick("1")}>1</button>
-        <button onClick={() => handleClick("2")}>2</button>
-        <button onClick={() => handleClick("3")}>3</button>
-        <button onClick={calculateResult}>=</button>
-        <button onClick={() => handleClick("0")}>0</button>
-        <button onClick={() => handleClick(".")}>.</button>
-        <button onClick={() => handleClick("(")}>(</button>
-        <button onClick={() => handleClick(")")}>)</button>
-        {/* Scientific buttons */}
-        <button onClick={() => setInput(`Math.sin(${input})`)}>sin</button>
-        <button onClick={() => setInput(`Math.cos(${input})`)}>cos</button>
-        <button onClick={() => setInput(`Math.tan(${input})`)}>tan</button>
-        <button onClick={() => setInput(`Math.sqrt(${input})`)}>√</button>
-        <button onClick={() => setInput(`Math.log(${input})`)}>log</button>
-        <button onClick={() => setInput(`${input}**2`)}>x²</button>
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div className="calculator">
+//       <div className="display">
+//         <input type="text" value={input} readOnly />
+//         <div className="result">{result}</div>
+//       </div>
+//       <div className="buttons">
+//         <button onClick={clearInput}>C</button>
+//         <button onClick={backspace}>←</button>
+//         <button onClick={() => handleClick("/")}>%</button>
+//         <button onClick={() => handleClick("*")}>/</button>
+//         <button onClick={() => handleClick("7")}>7</button>
+//         <button onClick={() => handleClick("8")}>8</button>
+//         <button onClick={() => handleClick("9")}>9</button>
+//         <button onClick={() => handleClick("-")}>+</button>
+//         <button onClick={() => handleClick("4")}>4</button>
+//         <button onClick={() => handleClick("5")}>5</button>
+//         <button onClick={() => handleClick("6")}>6</button>
+//         <button onClick={() => handleClick("+")}>-</button>
+//         <button onClick={() => handleClick("1")}>1</button>
+//         <button onClick={() => handleClick("2")}>2</button>
+//         <button onClick={() => handleClick("3")}>3</button>
+//         <button onClick={calculateResult}>=</button>
+//         <button onClick={() => handleClick("0")}>0</button>
+//         <button onClick={() => handleClick(".")}>.</button>
+//         <button onClick={() => handleClick("(")}>(</button>
+//         <button onClick={() => handleClick(")")}>)</button>
+//         {/* Scientific buttons */}
+//         <button onClick={() => setInput(`Math.sin(${input})`)}>sin</button>
+//         <button onClick={() => setInput(`Math.cos(${input})`)}>cos</button>
+//         <button onClick={() => setInput(`Math.tan(${input})`)}>tan</button>
+//         <button onClick={() => setInput(`Math.sqrt(${input})`)}>√</button>
+//         <button onClick={() => setInput(`Math.log(${input})`)}>log</button>
+//         <button onClick={() => setInput(`${input}**2`)}>x²</button>
+//       </div>
+//     </div>
+//   );
+// }
 
-export default App; // end of calculator small project for react
+// export default App; // end of calculator small project for react
 
 
 // import logo from './logo.svg';
@@ -640,3 +640,46 @@ export default App; // end of calculator small project for react
 //     )
 //   }
 //end of todo-list
+
+
+
+
+
+import { useEffect, useState } from "react"
+
+import Navbar from "./Navbar/Navbar"; 
+
+import Background from "./Components/Background/Background";
+import Hero from "./Components/Hero/Hero";
+
+const App = () => {
+    let heroData = [
+        {text1:"Give in to",text2:"what you love"},
+        {text1:"Indulge",text2:"your passions"},
+        {text1:"Give in to",text2:"your passions"},
+    ]
+    const [heroCount,setHeroCount]=useState(0);
+    const [playStatus,setPlayStatus]=useState(false);
+
+    useEffect(()=>{
+      setInterval(()=>{
+        setHeroCount((count)=>{return count===2?0:count+1})
+      }, 5000);
+    },[])
+
+  return (
+    <div>
+      <Background playStatus={playStatus} heroCount={heroCount}/>
+      <Navbar/>
+      <Hero
+         setPlayStatus={setPlayStatus}
+        heroData={heroData[heroCount]}
+        heroCount={heroCount}
+        setHeroCount={setHeroCount}
+        playStatus={playStatus} 
+      />
+    </div>
+  )
+}
+
+export default App
